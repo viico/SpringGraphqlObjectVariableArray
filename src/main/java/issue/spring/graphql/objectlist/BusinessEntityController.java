@@ -13,4 +13,9 @@ public class BusinessEntityController {
     public boolean filterValueIsInstanceOfList(@Argument BusinessEntityFilterInput filter) {
         return filter.getValue() instanceof List;
     }
+
+    @QueryMapping
+    public boolean inputIsInstanceOfList(@Argument Object object) {
+        return object instanceof List;
+    }
 }

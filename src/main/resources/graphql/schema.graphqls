@@ -6,6 +6,7 @@ schema {
 
 type Query {
     filterValueIsInstanceOfList(filter: EntityFilterInput!): Boolean
+    inputIsInstanceOfList(object: Object!): Boolean
 }
 
 input EntityFilterInput {

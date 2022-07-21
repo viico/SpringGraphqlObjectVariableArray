@@ -65,4 +65,17 @@ public class BusinessEntityControllerTests {
                 .entity(Boolean.class)
                 .isEqualTo(true);
     }
+
+    /**
+     * Works, the input is an instance of {@link List}
+     */
+    @Test
+    void inputIsInstanceOfList_listValue() {
+        this.graphQlTester.documentName("inputIsInstanceOfList")
+                .variable("object", List.of("value1", "value2"))
+                .execute()
+                .path("inputIsInstanceOfList")
+                .entity(Boolean.class)
+                .isEqualTo(true);
+    }
 }

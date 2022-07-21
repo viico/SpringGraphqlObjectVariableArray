@@ -1,0 +1,3 @@
+query inputIsInstanceOfList($object: Object!) {
+    inputIsInstanceOfList(object: $object)
+}
