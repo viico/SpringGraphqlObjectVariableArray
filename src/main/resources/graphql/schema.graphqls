@@ -1,0 +1,14 @@
+scalar Object
+
+schema {
+    query: Query
+}
+
+type Query {
+    filterValueIsInstanceOfList(filter: EntityFilterInput!): Boolean
+}
+
+input EntityFilterInput {
+    label: String!
+    value: Object!
+}

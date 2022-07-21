@@ -1,0 +1,9 @@
+query {
+    filterValueIsInstanceOfList(filter: {
+        label: "label",
+        value: [
+            "value1",
+            "value2"
+        ]
+    })
+}
