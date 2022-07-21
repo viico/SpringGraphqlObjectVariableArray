@@ -49,7 +49,7 @@ public class BusinessEntityControllerTests {
 
     /**
      * Failed with a {@link List} of 2 {@link String} passed in variable, exception :
-     * org.springframework.beans.InvalidPropertyException: Invalid property 'value[0]' of bean class [issue.spring.graphql.objectlist.EntityFilterInput]: Property referenced in indexed property path 'value[0]' is neither an array nor a List nor a Map; returned value was [java.lang.Object@7841bd30]
+     * org.springframework.beans.InvalidPropertyException: Invalid property 'value[0]' of bean class [issue.spring.graphql.objectlist.BusinessEntityFilterInput]: Property referenced in indexed property path 'value[0]' is neither an array nor a List nor a Map; returned value was [java.lang.Object@74123110]
      */
     @Test
     void filterValueIsInstanceOfList_withException() {
