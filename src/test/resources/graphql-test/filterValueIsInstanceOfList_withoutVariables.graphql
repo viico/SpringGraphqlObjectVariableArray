@@ -1,6 +1,6 @@
 query {
     filterValueIsInstanceOfList(filter: {
-        label: "label",
+        operator: "operator",
         value: [
             "value1",
             "value2"

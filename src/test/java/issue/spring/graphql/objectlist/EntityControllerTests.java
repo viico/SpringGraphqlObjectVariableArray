@@ -22,7 +22,7 @@ public class EntityControllerTests {
     @Test
     void filterValueIsInstanceOfList_ok() {
         final Map<String, Object> value = Map.of(
-                "label", "label",
+                "operator", "operator",
                 "value", "value"
         );
 
@@ -54,7 +54,7 @@ public class EntityControllerTests {
     @Test
     void filterValueIsInstanceOfList_ko2() {
         final Map<String, Object> value = Map.of(
-                "label", "label",
+                "operator", "operator",
                 "value", List.of("value1", "value2")
         );
 

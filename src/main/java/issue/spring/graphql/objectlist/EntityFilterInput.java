@@ -1,15 +1,15 @@
 package issue.spring.graphql.objectlist;
 
 public class EntityFilterInput {
-    private String label;
+    private String operator;
     private Object value;
 
-    public String getLabel() {
-        return label;
+    public String getOperator() {
+        return operator;
     }
 
-    public EntityFilterInput setLabel(String label) {
-        this.label = label;
+    public EntityFilterInput setOperator(String operator) {
+        this.operator = operator;
         return this;
     }
 

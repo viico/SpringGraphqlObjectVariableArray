@@ -9,6 +9,6 @@ type Query {
 }
 
 input EntityFilterInput {
-    label: String!
+    operator: String!
     value: Object!
 }
