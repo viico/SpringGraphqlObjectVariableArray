@@ -7,10 +7,10 @@ import org.springframework.stereotype.Controller;
 import java.util.List;
 
 @Controller
-public class EntityController {
+public class BusinessEntityController {
 
     @QueryMapping
-    public boolean filterValueIsInstanceOfList(@Argument EntityFilterInput filter) {
+    public boolean filterValueIsInstanceOfList(@Argument BusinessEntityFilterInput filter) {
         return filter.getValue() instanceof List;
     }
 }

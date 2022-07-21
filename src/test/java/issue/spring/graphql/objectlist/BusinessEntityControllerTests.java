@@ -9,9 +9,9 @@ import org.springframework.graphql.test.tester.GraphQlTester;
 import java.util.List;
 import java.util.Map;
 
-@GraphQlTest(EntityController.class)
+@GraphQlTest(BusinessEntityController.class)
 @Import(GraphQlConfig.class)
-public class EntityControllerTests {
+public class BusinessEntityControllerTests {
 
     @Autowired
     private GraphQlTester graphQlTester;
@@ -20,7 +20,7 @@ public class EntityControllerTests {
      * Works with a {@link String} in {@link Object} type (cast OK)
      */
     @Test
-    void filterValueIsInstanceOfList_ok() {
+    void filterValueIsInstanceOfList_stringValue() {
         final Map<String, Object> value = Map.of(
                 "operator", "operator",
                 "value", "value"
@@ -39,7 +39,7 @@ public class EntityControllerTests {
      * we have an {@link graphql.language.ArrayValue} in {@link Object}, shall we have a List instead ?
      */
     @Test
-    void filterValueIsInstanceOfList_ko() {
+    void filterValueIsInstanceOfList_withoutVariables() {
         this.graphQlTester.documentName("filterValueIsInstanceOfList_withoutVariables")
                 .execute()
                 .path("filterValueIsInstanceOfList")
@@ -52,7 +52,7 @@ public class EntityControllerTests {
      * org.springframework.beans.InvalidPropertyException: Invalid property 'value[0]' of bean class [issue.spring.graphql.objectlist.EntityFilterInput]: Property referenced in indexed property path 'value[0]' is neither an array nor a List nor a Map; returned value was [java.lang.Object@7841bd30]
      */
     @Test
-    void filterValueIsInstanceOfList_ko2() {
+    void filterValueIsInstanceOfList_withException() {
         final Map<String, Object> value = Map.of(
                 "operator", "operator",
                 "value", List.of("value1", "value2")

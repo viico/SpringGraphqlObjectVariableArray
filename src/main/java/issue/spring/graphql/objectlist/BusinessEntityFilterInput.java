@@ -1,6 +1,6 @@
 package issue.spring.graphql.objectlist;
 
-public class EntityFilterInput {
+public class BusinessEntityFilterInput {
     private String operator;
     private Object value;
 
@@ -8,7 +8,7 @@ public class EntityFilterInput {
         return operator;
     }
 
-    public EntityFilterInput setOperator(String operator) {
+    public BusinessEntityFilterInput setOperator(String operator) {
         this.operator = operator;
         return this;
     }
@@ -17,7 +17,7 @@ public class EntityFilterInput {
         return value;
     }
 
-    public EntityFilterInput setValue(Object value) {
+    public BusinessEntityFilterInput setValue(Object value) {
         this.value = value;
         return this;
     }
