@@ -1,5 +1,6 @@
 package issue.spring.graphql.objectlist;
 
+import graphql.scalars.ExtendedScalars;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.graphql.GraphQlTest;
@@ -37,6 +38,10 @@ public class BusinessEntityControllerTests {
     /**
      * There is no {@link Exception} with an array of 2 {@link String} declared directly in the GraphQL query,
      * we have an {@link graphql.language.ArrayValue} in {@link Object}, shall we have a List instead ?
+     *
+     * UPDATE: after switching on {@link ExtendedScalars} object type we have the exception on both test
+     * (`filterValueIsInstanceOfList_withoutVariables` and `filterValueIsInstanceOfList_withException`),
+     * it is more coherent.
      */
     @Test
     void filterValueIsInstanceOfList_withoutVariables() {
