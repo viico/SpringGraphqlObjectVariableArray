@@ -1,9 +1,0 @@
-query {
-    filterValueIsInstanceOfList(filter: {
-        operator: "operator",
-        value: [
-            "value1",
-            "value2"
-        ]
-    })
-}

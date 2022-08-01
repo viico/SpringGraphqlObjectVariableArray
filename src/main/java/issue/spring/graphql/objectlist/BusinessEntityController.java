@@ -1,21 +1,18 @@
 package issue.spring.graphql.objectlist;
 
-import org.springframework.graphql.data.method.annotation.Argument;
-import org.springframework.graphql.data.method.annotation.QueryMapping;
-import org.springframework.stereotype.Controller;
+import graphql.kickstart.tools.GraphQLQueryResolver;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Controller
-public class BusinessEntityController {
+@Component
+public class BusinessEntityController implements GraphQLQueryResolver {
 
-    @QueryMapping
-    public boolean filterValueIsInstanceOfList(@Argument BusinessEntityFilterInput filter) {
+    public boolean filterValueIsInstanceOfList(BusinessEntityFilterInput filter) {
         return filter.getValue() instanceof List;
     }
 
-    @QueryMapping
-    public boolean inputIsInstanceOfList(@Argument Object object) {
+    public boolean inputIsInstanceOfList(Object object) {
         return object instanceof List;
     }
 }

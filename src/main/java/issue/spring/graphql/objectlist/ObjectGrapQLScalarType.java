@@ -1,13 +1,11 @@
 package issue.spring.graphql.objectlist;
 
-import graphql.scalars.ExtendedScalars;
 import graphql.schema.*;
-import org.springframework.boot.autoconfigure.graphql.GraphQlSourceBuilderCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class GraphQlConfig {
+public class ObjectGrapQLScalarType {
 
     @Bean
     public GraphQLScalarType objectGraphQLScalarType() {
@@ -33,13 +31,4 @@ public class GraphQlConfig {
                 })
                 .build();
     }
-
-    @Bean
-    public GraphQlSourceBuilderCustomizer sourceBuilderCustomizer(GraphQLScalarType objectGraphQLScalarType) {
-        return (graphQlSourceBuilder) -> graphQlSourceBuilder
-                .configureRuntimeWiring((wiringBuilder) -> wiringBuilder
-                        .scalar(ExtendedScalars.Object));
-                        //.scalar(objectGraphQLScalarType));
-    }
 }
-

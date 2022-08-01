@@ -1,3 +1,0 @@
-query filterValueIsInstanceOfList($filter: EntityFilterInput!) {
-    filterValueIsInstanceOfList(filter: $filter)
-}
