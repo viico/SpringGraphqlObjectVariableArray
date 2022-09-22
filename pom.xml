@@ -14,6 +14,11 @@
 	<description>Demo project for casting problem with an array in variable</description>
 	<properties>
 		<java.version>11</java.version>
+		<!--
+        FIXME override la version de spring-graphql pour avoir le fix du custom-scalar Object (https://github.com/spring-projects/spring-graphql/issues/447),
+          supprimer cette ligne dès que Spring Boot utilisera une version de la lib correct (>= 1.0.2)
+        -->
+		<spring-graphql.version>1.0.2</spring-graphql.version>
 	</properties>
 	<dependencies>
 		<dependency>
